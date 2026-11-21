@@ -47,7 +47,6 @@ Technologies and Tools
 - NumPy
 - Pillow
 - Flask
-- TensorFlow Lite
 
 Application Implementation
 
