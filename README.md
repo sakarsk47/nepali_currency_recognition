@@ -102,3 +102,48 @@ This work was completed as part of my MSc Data Analytics dissertation at Islingt
 Dissertation Title
 
 Deep Learning Based Detection and Classification of Nepali Currency Denominations Using Optimized Convolutional Neural Networks.
+
+## Application Demonstration
+
+The following demonstrations showcase the web application, real-time currency recognition, image-based classification and audio feedback.
+
+### 1. Application Setup and Web Interface
+
+The application is developed using Flask and provides a web-based interface for interacting with the trained currency recognition model. It can be launched locally through VS Code and accessed through a web browser. After executing `app.py` in VS Code, the Flask development server starts locally and displays the application URL (`http://127.0.0.1:5000`) in the terminal. Opening this URL in a web browser provides access to the Nepali Currency Recognition web application.
+
+**Application Running in VS Code**
+
+![Application running in VS Code](images/code.jpg)
+
+**Main Web Application Interface**
+
+![Web application interface](images/WebApplication.jpg)
+
+### 2. Real-Time Currency Recognition
+
+The application supports real-time currency recognition through a webcam. After selecting the live video option, the webcam is activated, allowing users to position a banknote within the designated detection area. The system predicts the denomination and displays the corresponding confidence score.
+
+The demonstration shows successful recognition of NPR 50, NPR 10 and NPR 20 banknotes.
+
+[Watch Real-Time Currency Recognition Demonstration](videos/real_time_recognition.mp4)
+
+### 3. Recognition of Seven Nepali Currency Denominations
+
+The system is designed to recognise seven Nepali currency denominations: NPR 5, NPR 10, NPR 20, NPR 50, NPR 100, NPR 500 and NPR 1,000.
+
+The following demonstration presents sample images of all seven denominations.
+
+[Watch Seven Denominations Demonstration](videos/available_seven_denominations.mp4)
+
+### 4. Image Upload and Audio-Based Recognition
+
+In addition to webcam-based recognition, the application allows users to upload banknote images for denomination classification. Following image processing and prediction, the application provides an audio announcement of the recognised denomination in Nepali.
+
+This feature demonstrates the potential of the system as an assistive application for visually impaired users by providing auditory feedback alongside visual predictions.
+
+The demonstration includes two examples:
+
+- NPR 5 banknote with a Nepali audio announcement.
+- NPR 100 banknote with a Nepali audio announcement.
+
+[Watch Image Upload and Audio Recognition Demonstration](videos/image_upload_testing.mp4)
