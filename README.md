@@ -1,15 +1,15 @@
 
-NEPALI CURRENCY DENOMINATION RECOGNITION USING DEEP LEARNING
+# Nepali Currency Denomination Recognition Using Deep Learning
 
-Project Overview
+## 1. Project Overview
 
-This project was undertaken as part of my MSc Data Analytics dissertation. It focuses on the application of deep learning and computer vision techniques for the automatic detection and classification of Nepali currency denominations.
+This project was undertaken as part of my **MSc Data Analytics dissertation**. It focuses on the application of deep learning and computer vision techniques for the automatic detection and classification of Nepali currency denominations.
 
-The system uses a trained convolutional neural network to classify images of Nepali banknotes into seven denomination categories. In addition to model development and evaluation, a Flask-based web application was implemented to demonstrate the practical use of the trained model.
+The system uses a trained **Convolutional Neural Network (CNN)** to classify images of Nepali banknotes into seven denomination categories. In addition to model development and evaluation, a **Flask-based web application** was implemented to demonstrate the practical application of the trained model.
 
 The application supports both image-based and webcam-based recognition. It also incorporates audio announcements to communicate the predicted denomination, with the aim of improving accessibility for visually impaired users.
 
-Recognized Denominations
+## 2. Recognised Currency Denominations
 
 The model identifies the following seven Nepali currency denominations:
 
@@ -19,97 +19,113 @@ The model identifies the following seven Nepali currency denominations:
 - NPR 50
 - NPR 100
 - NPR 500
-- NPR 1000
+- NPR 1,000
 
-Application Features
+## 3. Application Features
 
 - Classification of seven Nepali banknote denominations.
 - Image upload and denomination prediction.
-- Webcam-based currency recognition.
+- Real-time webcam-based currency recognition.
 - Image preprocessing before model prediction.
-- Audio announcements of recognized denominations.
-- Flask-based web interface for interacting with the model.
+- Audio announcements of recognised denominations.
+- Flask-based web interface for interacting with the trained model.
 
-Methodology
+## 4. Methodology
 
-The project explores deep learning-based image classification using convolutional neural networks. MobileNetV2 was investigated as a transfer learning architecture, alongside a baseline CNN, to examine their performance in recognizing Nepali currency denominations.
+The project explores deep learning-based image classification using convolutional neural networks. **MobileNetV2** was investigated as a transfer learning architecture alongside a baseline CNN to examine their performance in recognising Nepali currency denominations.
 
-The development process involved dataset preparation, image preprocessing, model training, performance evaluation and implementation of the trained model in a web-based application.
+The development process involved:
 
-Research Results
+1. Dataset preparation and organisation.
+2. Image preprocessing.
+3. CNN model development and training.
+4. Transfer learning using MobileNetV2.
+5. Hyperparameter tuning and model optimisation.
+6. Performance evaluation using an independent test dataset.
+7. Integration of the trained model into a Flask-based web application.
 
-Dataset
+## 5. Research Results
 
-The experiments were conducted using a dataset of 16,249 Nepali currency images representing seven denominations: NPR 5, NPR 10, NPR 20, NPR 50, NPR 100, NPR 500 and NPR 1,000.
+### 5.1 Dataset
+
+The experiments were conducted using a dataset of **16,249 Nepali currency images** representing seven denominations: NPR 5, NPR 10, NPR 20, NPR 50, NPR 100, NPR 500 and NPR 1,000.
 
 The dataset was divided into three subsets:
 
 | Dataset | Number of Images |
-|:--------|-----------------:|
+|:--|--:|
 | Training | 10,500 |
 | Validation | 3,500 |
 | Testing | 2,249 |
 | **Total** | **16,249** |
 
-Model Performance Comparison
+### 5.2 Model Performance Comparison
 
 Three model configurations were evaluated: a baseline Convolutional Neural Network (CNN), MobileNetV2 using transfer learning, and MobileNetV2 with hyperparameter tuning.
 
 | Model | Validation Accuracy | Test Accuracy | Precision | Recall | F1-score |
-|:------|--------------------:|--------------:|----------:|-------:|---------:|
+|:--|--:|--:|--:|--:|--:|
 | Baseline CNN | 87% | 85% | 0.83 | 0.81 | 0.82 |
 | MobileNetV2 (Transfer Learning) | 91% | 89% | 0.89 | 0.87 | 0.88 |
 | MobileNetV2 (Hyperparameter Tuning) | 95% | 84% | 0.93 | 0.91 | 0.92 |
 
-Key Findings
+### 5.3 Key Findings
 
-- MobileNetV2 with transfer learning achieved the highest independent test accuracy of 89%, outperforming the baseline CNN, which achieved    85%.
-- Hyperparameter-tuned MobileNetV2 achieved the highest validation accuracy of 95%, along with the strongest reported precision, recall and   F1-score.
-- Despite its higher validation accuracy, the tuned model achieved 84% test accuracy, indicating that its validation performance did not    translate into the highest performance on the independent test dataset.
-- Classification errors were more frequent between visually similar denominations, particularly NPR 50 and NPR 100.
-- Image quality, including lighting conditions, blur and banknote wear, remains an important consideration for reliable recognition.
+- **Best independent test accuracy:** MobileNetV2 with transfer learning achieved 89%, outperforming the baseline CNN, which achieved 85%.
+- **Best validation accuracy:** Hyperparameter-tuned MobileNetV2 achieved 95%, along with the strongest reported precision, recall and F1-score.
+- **Generalisation:** Despite its higher validation accuracy, the tuned model achieved 84% test accuracy, indicating that its validation performance did not translate into the highest performance on the independent test dataset.
+- **Classification errors:** Errors were more frequent between visually similar denominations, particularly NPR 50 and NPR 100.
+- **Image quality:** Lighting conditions, blur and banknote wear remain important considerations for reliable recognition.
 
 These results demonstrate the potential of transfer learning and CNN-based approaches for Nepali currency denomination classification, while highlighting the importance of independent testing and further evaluation under diverse real-world conditions.
 
+## 6. Technologies and Tools
 
-Technologies and Tools
+The project was developed using the following technologies and tools:
 
-- Python
-- TensorFlow and Keras
-- Convolutional Neural Networks
-- MobileNetV2
-- OpenCV
-- NumPy
-- Pillow
-- Flask
+- **Programming Language:** Python
+- **Deep Learning Frameworks:** TensorFlow and Keras
+- **Model Architectures:** Convolutional Neural Networks (CNNs), MobileNetV2
+- **Computer Vision:** OpenCV
+- **Image Processing:** Pillow
+- **Numerical Computing:** NumPy
+- **Web Application Framework:** Flask
 
-Application Implementation
+## 7. Application Implementation
 
 The developed Flask application provides two methods of currency recognition.
 
-Image Upload
+### 7.1 Image Upload and Recognition
 
 Users can upload an image of a Nepali banknote through the web interface. The application preprocesses the image and passes it to the trained model for denomination classification. The predicted denomination is displayed and communicated through an audio announcement.
 
-Webcam Recognition
+### 7.2 Webcam-Based Recognition
 
-The application also supports webcam-based recognition. It captures video frames, processes the images and uses the trained model to identify the denomination. Once a banknote is recognised with sufficient confidence, the application displays and announces the prediction.
+The application also supports real-time webcam-based recognition. It captures video frames, processes the images and uses the trained model to identify the denomination. Once a banknote is recognised with sufficient confidence, the application displays and announces the prediction.
 
-Research Background
+### 7.3 Trained Model Integration
 
-This work was completed as part of my MSc Data Analytics dissertation at Islington College, in collaboration with London Metropolitan University.
+The deep learning model was trained and evaluated using **TensorFlow and Keras** as part of this research. Following model development and evaluation, the trained model was saved in HDF5 format as `cashRec.h5`.
 
-Dissertation Title
+The Flask application loads this saved model during startup and uses it to perform inference on uploaded banknote images and webcam input. This allows the application to classify Nepali currency denominations without requiring the model to be retrained each time the application is launched.
 
-Deep Learning Based Detection and Classification of Nepali Currency Denominations Using Optimized Convolutional Neural Networks.
+## 8. Research Background
 
-## Application Demonstration
+This work was completed as part of my **MSc Data Analytics dissertation** at Islington College, in collaboration with London Metropolitan University.
 
-The following demonstrations showcase the web application, real-time currency recognition, image-based classification and audio feedback.
+**Dissertation Title:**
 
-### 1. Application Setup and Web Interface
+*Deep Learning Based Detection and Classification of Nepali Currency Denominations Using Optimized Convolutional Neural Networks.*
 
-The application is developed using Flask and provides a web-based interface for interacting with the trained currency recognition model. It can be launched locally through VS Code and accessed through a web browser. After executing `app.py` in VS Code, the Flask development server starts locally and displays the application URL (`http://127.0.0.1:5000`) in the terminal. Opening this URL in a web browser provides access to the Nepali Currency Recognition web application.
+## 9. Application Demonstration
+
+The following demonstrations showcase the practical implementation of the trained deep learning model within the Flask web application, including real-time currency recognition, image-based classification and audio feedback.
+
+### 9.1 Application Setup and Web Interface
+
+The application is developed using Flask and provides a web-based interface for interacting with the trained currency recognition model.
+
+After executing `app.py` in VS Code, the Flask development server starts locally and displays the application URL (`http://127.0.0.1:5000`) in the terminal. Opening this URL in a web browser provides access to the Nepali Currency Recognition web application.
 
 **Application Running in VS Code**
 
@@ -119,23 +135,27 @@ The application is developed using Flask and provides a web-based interface for 
 
 ![Web application interface](images/WebApplication.jpg)
 
-### 2. Real-Time Currency Recognition
+### 9.2 Real-Time Currency Recognition
 
 The application supports real-time currency recognition through a webcam. After selecting the live video option, the webcam is activated, allowing users to position a banknote within the designated detection area. The system predicts the denomination and displays the corresponding confidence score.
 
 The demonstration shows successful recognition of NPR 50, NPR 10 and NPR 20 banknotes.
 
-[Watch Real-Time Currency Recognition Demonstration](https://youtube.com/shorts/ZuMjuFYxfMU)
+**Watch the Real-Time Currency Recognition Demonstration:**
 
-### 3. Recognition of Seven Nepali Currency Denominations
+[View Real-Time Recognition Video](https://youtube.com/shorts/ZuMjuFYxfMU)
+
+### 9.3 Recognition of Seven Nepali Currency Denominations
 
 The system is designed to recognise seven Nepali currency denominations: NPR 5, NPR 10, NPR 20, NPR 50, NPR 100, NPR 500 and NPR 1,000.
 
 The following demonstration presents sample images of all seven denominations.
 
-[Watch Seven Denominations Demonstration](https://youtu.be/eAiTSauuFDU)
+**Watch the Seven Denominations Demonstration:**
 
-### 4. Image Upload and Audio-Based Recognition
+[View Seven Denominations Video](https://youtu.be/eAiTSauuFDU)
+
+### 9.4 Image Upload and Audio-Based Recognition
 
 In addition to webcam-based recognition, the application allows users to upload banknote images for denomination classification. Following image processing and prediction, the application provides an audio announcement of the recognised denomination in Nepali.
 
@@ -146,4 +166,6 @@ The demonstration includes two examples:
 - NPR 5 banknote with a Nepali audio announcement.
 - NPR 100 banknote with a Nepali audio announcement.
 
-[Watch Image Upload and Audio Recognition Demonstration](https://youtu.be/IxATT7Z5PPY)
+**Watch the Image Upload and Audio Recognition Demonstration:**
+
+[View Image Upload and Audio Recognition Video](https://youtu.be/IxATT7Z5PPY)
