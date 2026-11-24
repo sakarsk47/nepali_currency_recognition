@@ -125,7 +125,7 @@ The application supports real-time currency recognition through a webcam. After 
 
 The demonstration shows successful recognition of NPR 50, NPR 10 and NPR 20 banknotes.
 
-[Watch Real-Time Currency Recognition Demonstration](videos/real_time_recognition.mp4)
+[Watch Real-Time Currency Recognition Demonstration](https://youtube.com/shorts/ZuMjuFYxfMU)
 
 ### 3. Recognition of Seven Nepali Currency Denominations
 
@@ -133,7 +133,7 @@ The system is designed to recognise seven Nepali currency denominations: NPR 5, 
 
 The following demonstration presents sample images of all seven denominations.
 
-[Watch Seven Denominations Demonstration](videos/available_seven_denominations.mp4)
+[Watch Seven Denominations Demonstration](https://youtu.be/eAiTSauuFDU)
 
 ### 4. Image Upload and Audio-Based Recognition
 
@@ -146,4 +146,4 @@ The demonstration includes two examples:
 - NPR 5 banknote with a Nepali audio announcement.
 - NPR 100 banknote with a Nepali audio announcement.
 
-[Watch Image Upload and Audio Recognition Demonstration](videos/image_upload_testing.mp4)
+[Watch Image Upload and Audio Recognition Demonstration](https://youtu.be/IxATT7Z5PPY)
